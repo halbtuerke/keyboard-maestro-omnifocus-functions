@@ -27,4 +27,3 @@ Each function stores the returned value in a Keyboard Maestro variable.
 At the end of the calling macro, use the Keyboard Maestro action "Set Variable to Text" and overwrite  the function variable with:
 
 	%Delete%
-
