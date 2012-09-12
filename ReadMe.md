@@ -8,6 +8,10 @@
 - Get OmniFocus task due date
 - Get OmniFocus task context
 - Get OmniFocus Task URL
+- Get URL(s) From OmniFocus task note
+- Convert OmniFocus Task creation date format
+- Convert OmniFocus Task due date format
+
 
 ## Usage ##
 
@@ -21,6 +25,7 @@ Each function stores the returned value in a Keyboard Maestro variable.
 - OFTaskDueDate
 - OFTaskContext
 - OFTaskURL
+- OFTaskNoteURL
 
 ## Best Practice ##
 
