@@ -1,16 +1,24 @@
 # OmniFocus Keyboard Maestro Macro Functions
 
+Useful for exporting an OmniFocus tasks to another bucket (nvALT, MindMap) in a format that works best for you.
+
 ##  Retrieve Information From a Selected OmniFocus Task
 
 - Get OmniFocus task name
 - Get OmniFocus task note
 - Get OmniFocus task creation date
 - Get OmniFocus task due date
+- Get OmniFocus task start date
 - Get OmniFocus task context
-- Get OmniFocus Task URL
+- Get OmniFocus task URI
+- Get OmniFocus task project name
+- Get OmniFocus task parent name (Action Group)
 - Get URL(s) From OmniFocus task note
-- Convert OmniFocus Task creation date format
-- Convert OmniFocus Task due date format
+- Get OmniFocus task flag status
+- Convert OmniFocus task creation date format
+- Convert OmniFocus task due date format
+- Convert OmniFocus task start date format
+
 
 
 ## Usage ##
@@ -19,13 +27,18 @@ Use Keyboard Maestro action: "Execute A Macro".
   
 Each function stores the returned value in a Keyboard Maestro variable.
 
-- OFTaskName
-- OFTaskNote
-- OFTaskDate
-- OFTaskDueDate
-- OFTaskContext
-- OFTaskURL
-- OFTaskNoteURL
+- OFTaskName - Name of the selected task
+- OFTaskNote - Note of the selected task
+- OFTaskDate - Creation Date of the selected task
+- OFTaskDueDate - Due date of the selected task
+- OFTaskContext - Context of the selected task
+- OFTaskURL - The URI of the selected task
+- OFTaskNoteURL - The URL(s) in the note of the selected task
+- OFTaskFlag - Flag status of the selected Task
+- OFTaskParentName - The name of the selected task's parents (Action Group)
+- OFTaskProj - The Name of the Project associated with the Selected Task
+- OFConvertedDate - Contains the time stamp conversions for creation date, due date and start date
+
 
 ## Best Practice ##
 
