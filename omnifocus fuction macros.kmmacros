@@ -4,14 +4,46 @@
 <array>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFDate: a long formatted date string
+OFConvertedDate: a reformatted date string
+%Delete% an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskConvertedDate</string>
+					</dict>
 					<dict>
 						<key>Count</key>
 						<integer>1</integer>
@@ -27,107 +59,6 @@
 						<true/>
 					</dict>
 					<dict>
-						<key>DisplayKind</key>
-						<string>Variable</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>Path</key>
-						<string></string>
-						<key>Text</key>
-						<string>#!/usr/bin/python
- # -*- coding: utf-8 -*-
-# 10:38:58 Thu Mar 01 2012# Used for a script to convert OmniFocus date
-
-from datetime import datetime
-import sys, os
-
-def swapDate(strDate):
-     d = datetime.strptime(strDate, '%A, %B %d, %Y %I:%M:%S %p')
-     day_string = d.strftime('%Y-%m-%d_%H%M%S')
-     return day_string
-
-strDate = swapDate(os.getenv('KMVAR_OFTaskDate'))
-print strDate</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-						<key>Variable</key>
-						<string>OFTaskDate</string>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>DisplayBriefly</string>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
-						<key>Text</key>
-						<string>Converted Date: %Variable%OFTaskDate%</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>SetVariableToText</string>
-						<key>Text</key>
-						<string>%Delete%</string>
-						<key>Variable</key>
-						<string>OFTaskDate</string>
-					</dict>
-				</array>
-				<key>IsActive</key>
-				<true/>
-				<key>Name</key>
-				<string>Function-Convert OmniFocus Creation Date</string>
-				<key>Triggers</key>
-				<array/>
-				<key>UID</key>
-				<string>6123A3B7-2663-4A35-80CA-CA1141874250</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
-		<key>UID</key>
-		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>IsActive</key>
-		<true/>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>Count</key>
-						<integer>1</integer>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>ExecuteMacro</string>
-						<key>MacroUID</key>
-						<string>A333C23D-1E13-4699-9520-676B5D22F311</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
 						<key>Conditions</key>
 						<dict>
 							<key>ConditionList</key>
@@ -136,7 +67,7 @@ print strDate</string>
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>OFTaskDueDate</string>
+									<string>OFTaskDate</string>
 									<key>VariableConditionType</key>
 									<string>IsNot</string>
 									<key>VariableValue</key>
@@ -192,6 +123,197 @@ def swapDate(strDate):
      day_string = d.strftime('%Y-%m-%d_%H%M%S')
      return day_string
 
+strDate = swapDate(os.getenv('KMVAR_OFTaskDate'))
+print strDate</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>OFTaskConvertedDate</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>Converted Creation Date: %Variable%OFTaskConvertedDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Convert Task Creation Date</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskDate</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Convert OmniFocus Creation Date</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>366CABF0-AF01-4D21-B50F-C63F3C4B2C53</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFDueDate: a long formatted date string
+OFConvertedDate: a reformatted date string
+%Delete% an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskConvertedDate</string>
+					</dict>
+					<dict>
+						<key>Count</key>
+						<integer>1</integer>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>A333C23D-1E13-4699-9520-676B5D22F311</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskDueDate</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>Any</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There is no Due Date to convert</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Convert Due Date</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>Capitalize</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>FilterVariable</string>
+								<key>Variable</key>
+								<string>OFTaskDueDate</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/usr/bin/python
+ # -*- coding: utf-8 -*-
+# 10:38:58 Thu Mar 01 2012# Used for a script to convert OmniFocus date
+
+from datetime import datetime
+import sys, os
+
+def swapDate(strDate):
+     d = datetime.strptime(strDate, '%A, %B %d, %Y %I:%M:%S %p')
+     day_string = d.strftime('%Y-%m-%d_%H%M%S')
+     return day_string
+
 strDate = swapDate(os.getenv('KMVAR_OFTaskDueDate'))
 print strDate</string>
 								<key>TimeOutAbortsMacro</key>
@@ -201,25 +323,35 @@ print strDate</string>
 								<key>UseText</key>
 								<true/>
 								<key>Variable</key>
-								<string>OFTaskDueDate</string>
+								<string>OFTaskConvertedDate</string>
 							</dict>
 							<dict>
-								<key>Action</key>
-								<string>DisplayBriefly</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<false/>
+								<string>Growl</string>
 								<key>Text</key>
-								<string>Converted Due Date: %Variable%OFTaskDueDate%</string>
+								<string>Converted Due Date: %Variable%OFTaskConvertedDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Convert Due Date</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskDueDate</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
@@ -232,6 +364,8 @@ print strDate</string>
 				<string>59C7AA3A-9018-49DE-B1EF-FBA27118D9CF</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -239,14 +373,236 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskStartDate: a long formatted date string
+OFConvertedDate: a reformatted date string
+%Delete% an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskConvertedDate</string>
+					</dict>
+					<dict>
+						<key>Count</key>
+						<integer>1</integer>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>F0E283A9-23C9-4150-B6ED-A7415170232A</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskStartDate</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>Any</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There is no Start Date to convert.</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Convert OmniFocus Task Start Date</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>Capitalize</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>FilterVariable</string>
+								<key>Variable</key>
+								<string>OFTaskStartDate</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>#!/usr/bin/python
+ # -*- coding: utf-8 -*-
+# 10:38:58 Thu Mar 01 2012# Used for a script to convert OmniFocus date
+
+from datetime import datetime
+import sys, os
+
+def swapDate(strDate):
+     d = datetime.strptime(strDate, '%A, %B %d, %Y %I:%M:%S %p')
+     day_string = d.strftime('%Y-%m-%d_%H%M%S')
+     return day_string
+
+strDate = swapDate(os.getenv('KMVAR_OFTaskStartDate'))
+print strDate</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>OFTaskConvertedDate</string>
+							</dict>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>Converted Start Date: %Variable%OFTaskConvertedDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Convert OmniFocus Task Start Date</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskStartDate</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Convert OmniFocus Start Date</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>92546F83-E02A-4FB0-B333-6E65A0B7A163</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskContext: a string containing a context name
+%Delete% : an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskContext</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -259,7 +615,7 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if the context of theSelection exists then		set theContext to the name of context of theSelection as string	else		set theContext to "%Delete%"	end if		tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFContext", value:theContext}	end tellend tell</string>
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if the context of theSelection exists then		set theContext to the name of context of theSelection as string	else		set theContext to "%Delete%"	end if		my MakeMaestroVar(theContext)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskContext", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -278,9 +634,9 @@ print strDate</string>
 									<key>ConditionType</key>
 									<string>Variable</string>
 									<key>Variable</key>
-									<string>OFContext</string>
+									<string>OFTaskContext</string>
 									<key>VariableConditionType</key>
-									<string>Contains</string>
+									<string>Is</string>
 									<key>VariableValue</key>
 									<string>%Delete%</string>
 								</dict>
@@ -291,18 +647,16 @@ print strDate</string>
 						<key>ElseActions</key>
 						<array>
 							<dict>
-								<key>Action</key>
-								<string>DisplayBriefly</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<false/>
+								<string>Growl</string>
 								<key>Text</key>
-								<string>Task Context is: %Variable%OFContext%</string>
+								<string>The Task Context is: %Variable%OFTaskContext%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus task context</string>
 							</dict>
 						</array>
 						<key>IsActive</key>
@@ -314,18 +668,16 @@ print strDate</string>
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>Action</key>
-								<string>DisplayBriefly</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<false/>
+								<string>Growl</string>
 								<key>Text</key>
 								<string>There is no context assigned to this task.</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus task context</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -342,6 +694,8 @@ print strDate</string>
 				<string>56C2DD45-3353-46F6-AD23-BC58C54DA56B</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -349,14 +703,33 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskDate: a long formatted date string
+%Delete% : an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -369,7 +742,7 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if				set theSelection to value of (item 1 of theSelectedItems)	set theDate to creation date of theSelection as string		tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskDate", value:theDate}	end tellend tell</string>
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	set theDate to creation date of theSelection as string	my MakeMaestroVar(theDate)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskDate", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -378,18 +751,6 @@ print strDate</string>
 						<true/>
 						<key>Variable</key>
 						<string>OFTaskDate</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>Text</key>
-						<string></string>
-						<key>Title</key>
-						<string>Remember to delete OFTaskDate</string>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -404,30 +765,76 @@ print strDate</string>
 						<string>OFTaskDate</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>DisplayBriefly</string>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskDate</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The OmniFocus Task was created on: %Variable%OFTaskDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Selected Date</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
-						<key>Text</key>
-						<string>%Variable%OFTaskDate%</string>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There was an error. Please review your selection and try again.</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Selected Date</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 				</array>
 				<key>IsActive</key>
 				<true/>
 				<key>Name</key>
-				<string>Function-Get OmniFocus Date</string>
+				<string>Function-Get OmniFocus Creation Date</string>
 				<key>Triggers</key>
 				<array/>
 				<key>UID</key>
 				<string>B79D951B-5731-4791-8644-39336CBAE40B</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -435,14 +842,45 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskDueDate: a long formatted date string
+%Delete% : an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskDueDate</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -455,7 +893,9 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>--	Created by: Sean Korzdorfer--	Created on: 09/10/12 08:58:53----	Copyright (c) 2012 MyCompanyName--	All Rights Reservedtell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if due date of theSelection exists then		set the theDueDate to the due date of theSelection as string	else		set the theDueDate to "%Delete%"			end if		tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskDueDate", value:theDueDate}	end tellend tell</string>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/10/12 08:58:53----	Copyright (c) 2012 MyCompanyName--	All Rights Reservedtell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if due date of theSelection exists then		set the theDueDate to the due date of theSelection as string	else		set the theDueDate to "%Delete%"	end if
+	
+		my MakeMaestroVar(theDueDate)			end tell		on MakeMaestroVar(theVarName)		tell application "Keyboard Maestro Engine"			make variable with properties {name:"OFTaskDueDate", value:theVarName}		end tell	end MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -476,7 +916,7 @@ print strDate</string>
 									<key>Variable</key>
 									<string>OFTaskDueDate</string>
 									<key>VariableConditionType</key>
-									<string>Contains</string>
+									<string>Is</string>
 									<key>VariableValue</key>
 									<string>%Delete%</string>
 								</dict>
@@ -487,18 +927,16 @@ print strDate</string>
 						<key>ElseActions</key>
 						<array>
 							<dict>
-								<key>Action</key>
-								<string>DisplayBriefly</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<false/>
+								<string>Growl</string>
 								<key>Text</key>
-								<string>Task Due Date: %Variable%OFTaskDueDate%</string>
+								<string>The Task Due Date: %Variable%OFTaskDueDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Due Date</string>
 							</dict>
 						</array>
 						<key>IsActive</key>
@@ -510,18 +948,16 @@ print strDate</string>
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>Action</key>
-								<string>DisplayBriefly</string>
 								<key>IsActive</key>
 								<true/>
 								<key>IsDisclosed</key>
 								<true/>
 								<key>MacroActionType</key>
-								<string>InsertText</string>
-								<key>Paste</key>
-								<false/>
+								<string>Growl</string>
 								<key>Text</key>
 								<string>There is no due date assigned to this task.</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Due Date</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -538,6 +974,8 @@ print strDate</string>
 				<string>A333C23D-1E13-4699-9520-676B5D22F311</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -545,14 +983,45 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>If Task is flagged: 1
+If Task is not Flagged: %Delete%</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskFlag</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -565,7 +1034,435 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theName to name of theSelection as rich text		tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskName", value:theName}	end tellend tell</string>
+						<string>----	Created by: Sean Korzdorfer--    Date:		2012-09-17_091711----   Function will return a Keyboard Maestro Variable OFTaskFlag with expected values:--     - If the task is flagged: 1-- 	  - If the task is not flagged: %Delete%tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if theSelection is flagged then		set the taskIsFlagged to 1	else		set taskIsFlagged to "%Delete%"			end if		my MakeMaestroVar(taskIsFlagged)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskFlag", value:theVarName}	end tellend MakeMaestroVar</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>OFProjName</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskFlag</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskFlag</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>1</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task is Flagged</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task is not Flagged</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Get OmniFocus Flag Status</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>EA3F7771-E17F-4305-A046-A40F9C09B0E1</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskParentName: a string of the selected task's parent(s) task(s).
+%Delete: an empty string … The task has no parent</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskParentName</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>-- Function expected to return a Keyboard Maestro Macro OFParentName with expected values--    - %Delete% if there is no containing task--    - Containing task nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox		set thePTask to theSelection	set theParentTask to ""	if thePTask is in inbox then		repeat while the parent task of thePTask is not missing value			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	else		repeat while the parent task of thePTask is not missing value and the parent task of thePTask is not the root task of the containing project of theSelection			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	end if	if theParentTask is "" then		set theParentTask to "%Delete%"	else		set len to length of theParentTask		set theParentTask to rich text 1 thru ((length of theParentTask) - 3) of theParentTask	end if	my MakeMaestroVar(theParentTask)	end tellon MakeMaestroVar(theVarValue)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskParentName", value:theVarValue}	end tellend MakeMaestroVar</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>OFProjName</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskParentName</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task has the parent task %Variable%OFTaskParentName%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task has no parent tasks</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Get OmniFocus Parent Task Name</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>32E88F90-089E-43A0-9181-095483D515AA</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskStartDate: a long formatted date string
+
+%Delete% : an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskStartDate</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/10/12 08:58:53----	Copyright (c) 2012 MyCompanyName--	All Rights Reservedtell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if start date of theSelection exists then		set the theStartDate to the start date of theSelection as string	else		set the theStartDate to "%Delete%"			end if		my MakeMaestroVar(theStartDate)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskStartDate", value:theVarName}	end tellend MakeMaestroVar</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>OFTaskDueDate</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskStartDate</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>Any</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task Start Date: %Variable%OFTaskStartDate%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Start Date</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There is no Start date assigned to this task.</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Start Date</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Get OmniFocus Start Date</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>F0E283A9-23C9-4150-B6ED-A7415170232A</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskNote: a string with the task note
+%Delete% : an empty string</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskNote</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theName to name of theSelection as rich text		my MakeMaestroVar(theName)			end tell		on MakeMaestroVar(theVarName)		tell application "Keyboard Maestro Engine"			make variable with properties {name:"OFTaskName", value:theVarName}		end tell	end MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -576,18 +1473,16 @@ print strDate</string>
 						<string>Variable</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>DisplayBriefly</string>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
+						<string>Growl</string>
 						<key>Text</key>
-						<string>%Variable%OFTaskName%</string>
+						<string>The task name is: %Variable%OFTaskName%</string>
+						<key>Title</key>
+						<string>Keyboard Maestro Macro: Get OmniFocus Task Name</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
@@ -600,6 +1495,8 @@ print strDate</string>
 				<string>CA5CC486-EE9A-408D-A115-C984B14C192F</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -607,14 +1504,46 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>  Function will return a Keyboard Maestro Variable OFTaskNote
+	- A string containig the task note
+	- If there is no task note: the string "%Delete%"</string>
+						<key>Title</key>
+						<string>Expected Return values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskNote</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -627,7 +1556,7 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theNote to note of theSelection as rich text		tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskNote", value:theNote}	end tellend tell</string>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 11:09:18----    Function will return a Keyboard Maestro Variable OFTaskNote with expected values:--    - A string containig the task note-- 	  - If there is no task note: the string "%Delete%"tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if			set theSelection to value of (item 1 of theSelectedItems)	set theNote to note of theSelection as rich text		if theNote is "" then		set theNote to "%Delete%"	end if		my MakeMaestroVar(theNote)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskNote", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -638,30 +1567,62 @@ print strDate</string>
 						<string>Variable</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>DisplayBriefly</string>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskNote</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The Task has no Note</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Note</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
-						<key>Text</key>
-						<string>Task Note: %Variable%OFTaskNote%</string>
-					</dict>
-					<dict>
-						<key>IsActive</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>Task Note: %Variable%OFTaskNote%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task Note</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
 						<true/>
-						<key>IsDisclosed</key>
-						<true/>
-						<key>JustDisplay</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>SetClipboardToText</string>
-						<key>Text</key>
-						<string>%Variable%OFTaskNote%</string>
 					</dict>
 				</array>
 				<key>IsActive</key>
@@ -674,6 +1635,8 @@ print strDate</string>
 				<string>6A02B777-85E2-40BA-B4D8-22DE50260660</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -681,9 +1644,15 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -701,7 +1670,103 @@ print strDate</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	if ((count of theSelectedItems) &lt; 1) then		display alert "You must first select a single task." message "Select a single task before running this script." as warning		return	end if	if ((count of theSelectedItems) &gt; 1) then		display alert "You must select only one task." message "Select a single task before running this script." as warning		return	end if		set theSelection to value of (item 1 of theSelectedItems)	set theURL to "omnifocus:///task/" &amp; id of theSelection as rich text	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskURL", value:theURL}	end tellend tell</string>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 07:14:30---- Function expected to return a Keyboard Maestro variable OFProjName with expected values--    - Inbox--    - Project Nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox	if theSelection is in inbox then		set theProjectName to "Inbox"	else		-- Get the Project Name		set theProjectName to name of containing project of theSelection	end if	my MakeMaestroVar(theProjectName)
+	return end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFProjName", value:theVarName}	end tellend MakeMaestroVar</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>OFProjName</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Growl</string>
+						<key>Text</key>
+						<string>The Task belongs to the project: %Variable%OFProjName%</string>
+						<key>Title</key>
+						<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Function-Get OmniFocus Task Project Name</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>5D228216-2A70-4004-8D26-380C7B443973</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>OmniFocus Maco Functions</string>
+		<key>UID</key>
+		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>IsActive</key>
+		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskURL - a string containing the task URL
+
+%Delete% - an emptry string … An Error.</string>
+						<key>Title</key>
+						<string>Expected Values</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskURL</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theURL to "omnifocus:///task/" &amp; id of theSelection as rich text
+my MakeMaestroVar(theURL)end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskURL", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -710,6 +1775,64 @@ print strDate</string>
 						<true/>
 						<key>Variable</key>
 						<string>Variable</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskURL</string>
+									<key>VariableConditionType</key>
+									<string>Is</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>Task URI: %Variable%OFTaskURL%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task URI</string>
+							</dict>
+						</array>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There was an error ...</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get OmniFocus Task URI</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>Action</key>
@@ -736,6 +1859,8 @@ print strDate</string>
 				<string>2F8DF604-5D0D-4568-BFB5-88AED84609A7</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
@@ -743,14 +1868,32 @@ print strDate</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>Normal</string>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
 		<key>IsActive</key>
 		<true/>
+		<key>KeyCode</key>
+		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Delete%</string>
+						<key>Variable</key>
+						<string>OFTaskNoteURL</string>
+					</dict>
 					<dict>
 						<key>Count</key>
 						<integer>1</integer>
@@ -803,18 +1946,63 @@ print theURL
 						<string>OFTaskNoteUrl</string>
 					</dict>
 					<dict>
-						<key>Action</key>
-						<string>DisplayBriefly</string>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>OFTaskNoteURL</string>
+									<key>VariableConditionType</key>
+									<string>IsEmpty</string>
+									<key>VariableValue</key>
+									<string>%Delete%</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>The URL(s) from the task note:
+%Variable%OFTaskNoteUrl%</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get URLs from OmniFocus Note</string>
+							</dict>
+						</array>
 						<key>IsActive</key>
 						<true/>
 						<key>IsDisclosed</key>
 						<true/>
 						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
-						<key>Text</key>
-						<string>%Variable%OFTaskNoteUrl%</string>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsActive</key>
+								<true/>
+								<key>IsDisclosed</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>Growl</string>
+								<key>Text</key>
+								<string>There were no URLs found in the task note</string>
+								<key>Title</key>
+								<string>Keyboard Maestro Macro: Get URLs from OmniFocus Note</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>IsActive</key>
@@ -839,6 +2027,8 @@ print theURL
 				<string>2B407EB0-8F33-4D20-84AB-E40B54C20830</string>
 			</dict>
 		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
 		<key>Name</key>
 		<string>OmniFocus Maco Functions</string>
 		<key>UID</key>
