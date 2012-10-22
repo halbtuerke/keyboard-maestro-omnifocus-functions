@@ -4,15 +4,9 @@
 <array>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -173,24 +167,16 @@ print strDate</string>
 				<string>366CABF0-AF01-4D21-B50F-C63F3C4B2C53</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -364,24 +350,16 @@ print strDate</string>
 				<string>59C7AA3A-9018-49DE-B1EF-FBA27118D9CF</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -555,24 +533,16 @@ print strDate</string>
 				<string>92546F83-E02A-4FB0-B333-6E65A0B7A163</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -694,24 +664,16 @@ print strDate</string>
 				<string>56C2DD45-3353-46F6-AD23-BC58C54DA56B</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -833,24 +795,16 @@ print strDate</string>
 				<string>B79D951B-5731-4791-8644-39336CBAE40B</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -974,24 +928,16 @@ print strDate</string>
 				<string>A333C23D-1E13-4699-9520-676B5D22F311</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1123,24 +1069,16 @@ If Task is not Flagged: %Delete%</string>
 				<string>EA3F7771-E17F-4305-A046-A40F9C09B0E1</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1183,7 +1121,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>-- Function expected to return a Keyboard Maestro Macro OFParentName with expected values--    - %Delete% if there is no containing task--    - Containing task nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox		set thePTask to theSelection	set theParentTask to ""	if thePTask is in inbox then		repeat while the parent task of thePTask is not missing value			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	else		repeat while the parent task of thePTask is not missing value and the parent task of thePTask is not the root task of the containing project of theSelection			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	end if	if theParentTask is "" then		set theParentTask to "%Delete%"	else		set len to length of theParentTask		set theParentTask to rich text 1 thru ((length of theParentTask) - 3) of theParentTask	end if	my MakeMaestroVar(theParentTask)	end tellon MakeMaestroVar(theVarValue)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskParentName", value:theVarValue}	end tellend MakeMaestroVar</string>
+						<string>-- Function expected to return a Keyboard Maestro Macro OFParentName with expected values--    - %Delete% if there is no containing task--    - Containing task nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFTaskParentName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox		set thePTask to theSelection	set theParentTask to ""	if thePTask is in inbox then		repeat while the parent task of thePTask is not missing value			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	else		repeat while the parent task of thePTask is not missing value and the parent task of thePTask is not the root task of the containing project of theSelection			set theParentTask to the name of the parent task of thePTask &amp; " &gt; " &amp; theParentTask			set thePTask to parent task of thePTask		end repeat	end if	if theParentTask is "" then		set theParentTask to "%Delete%"	else		set len to length of theParentTask		set theParentTask to rich text 1 thru ((length of theParentTask) - 3) of theParentTask	end if	my MakeMaestroVar(theParentTask)	end tellon MakeMaestroVar(theVarValue)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskParentName", value:theVarValue}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1222,7 +1160,7 @@ If Task is not Flagged: %Delete%</string>
 								<key>MacroActionType</key>
 								<string>Growl</string>
 								<key>Text</key>
-								<string>The Task has the parent task %Variable%OFTaskParentName%</string>
+								<string>The Task has the parent task: %Variable%OFTaskParentName%</string>
 								<key>Title</key>
 								<string>Keyboard Maestro Macro: Get OmniFocus Task Project Name</string>
 							</dict>
@@ -1262,24 +1200,16 @@ If Task is not Flagged: %Delete%</string>
 				<string>32E88F90-089E-43A0-9181-095483D515AA</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1323,7 +1253,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>--	Created by: Sean Korzdorfer--	Created on: 09/10/12 08:58:53----	Copyright (c) 2012 MyCompanyName--	All Rights Reservedtell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if start date of theSelection exists then		set the theStartDate to the start date of theSelection as string	else		set the theStartDate to "%Delete%"			end if		my MakeMaestroVar(theStartDate)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskStartDate", value:theVarName}	end tellend MakeMaestroVar</string>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/10/12 08:58:53----	Copyright (c) 2012 MyCompanyName--	All Rights Reservedtell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFStartDate variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if		set theSelection to value of (item 1 of theSelectedItems)	if start date of theSelection exists then		set the theStartDate to the start date of theSelection as string	else		set the theStartDate to "%Delete%"			end if		my MakeMaestroVar(theStartDate)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskStartDate", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1402,24 +1332,16 @@ If Task is not Flagged: %Delete%</string>
 				<string>F0E283A9-23C9-4150-B6ED-A7415170232A</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1448,7 +1370,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Text</key>
 						<string>%Delete%</string>
 						<key>Variable</key>
-						<string>OFTaskNote</string>
+						<string>OFTaskName</string>
 					</dict>
 					<dict>
 						<key>DisplayKind</key>
@@ -1462,7 +1384,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theName to name of theSelection as rich text		my MakeMaestroVar(theName)			end tell		on MakeMaestroVar(theVarName)		tell application "Keyboard Maestro Engine"			make variable with properties {name:"OFTaskName", value:theVarName}		end tell	end MakeMaestroVar</string>
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFTaskName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theName to name of theSelection as rich text		my MakeMaestroVar(theName)			end tell		on MakeMaestroVar(theVarName)		tell application "Keyboard Maestro Engine"			make variable with properties {name:"OFTaskName", value:theVarName}		end tell	end MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1495,24 +1417,16 @@ If Task is not Flagged: %Delete%</string>
 				<string>CA5CC486-EE9A-408D-A115-C984B14C192F</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1556,7 +1470,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 11:09:18----    Function will return a Keyboard Maestro Variable OFTaskNote with expected values:--    - A string containig the task note-- 	  - If there is no task note: the string "%Delete%"tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if			set theSelection to value of (item 1 of theSelectedItems)	set theNote to note of theSelection as rich text		if theNote is "" then		set theNote to "%Delete%"	end if		my MakeMaestroVar(theNote)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskNote", value:theVarName}	end tellend MakeMaestroVar</string>
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 11:09:18----    Function will return a Keyboard Maestro Variable OFTaskNote with expected values:--    - A string containig the task note-- 	  - If there is no task note: the string "%Delete%"tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFTaskNote variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if			set theSelection to value of (item 1 of theSelectedItems)	set theNote to note of theSelection as rich text		if theNote is "" then		set theNote to "%Delete%"	end if		my MakeMaestroVar(theNote)	end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskNote", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -1635,29 +1549,33 @@ If Task is not Flagged: %Delete%</string>
 				<string>6A02B777-85E2-40BA-B4D8-22DE50260660</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>Text</key>
+						<string>OFTaskProj - string containing the tasks project name or inbox</string>
+						<key>Title</key>
+						<string>Expected Value</string>
+					</dict>
 					<dict>
 						<key>DisplayKind</key>
 						<string>None</string>
@@ -1670,7 +1588,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 07:14:30---- Function expected to return a Keyboard Maestro variable OFProjName with expected values--    - Inbox--    - Project Nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox	if theSelection is in inbox then		set theProjectName to "Inbox"	else		-- Get the Project Name		set theProjectName to name of containing project of theSelection	end if	my MakeMaestroVar(theProjectName)
+						<string>--	Created by: Sean Korzdorfer--	Created on: 09/17/12 07:14:30---- Function expected to return a Keyboard Maestro variable OFProjName with expected values--    - Inbox--    - Project Nametell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being workd on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFTaskProj variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	-- Test if the selection is in the inbox	if theSelection is in inbox then		set theProjectName to "Inbox"	else		-- Get the Project Name		set theProjectName to name of containing project of theSelection	end if	my MakeMaestroVar(theProjectName)
 	return end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFProjName", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
@@ -1704,24 +1622,16 @@ If Task is not Flagged: %Delete%</string>
 				<string>5D228216-2A70-4004-8D26-380C7B443973</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1765,7 +1675,7 @@ If Task is not Flagged: %Delete%</string>
 						<key>Path</key>
 						<string></string>
 						<key>Text</key>
-						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFProjName variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theURL to "omnifocus:///task/" &amp; id of theSelection as rich text
+						<string>tell front window of application "OmniFocus"	set theSelectedItems to selected trees of content	-- Test that only one task is being worked on	if ((count of theSelectedItems) &lt; 1) or ((count of theSelectedItems) &gt; 1) then		display alert "Please select a single task." message "This script is limited to one task" as warning		-- Set the Keyboard Maestro OFTaskURL variable to %Delete%		my MakeMaestroVar("%Delete%")		return	end if	set theSelection to value of (item 1 of theSelectedItems)	set theURL to "omnifocus:///task/" &amp; id of theSelection as rich text
 my MakeMaestroVar(theURL)end tellon MakeMaestroVar(theVarName)	tell application "Keyboard Maestro Engine"		make variable with properties {name:"OFTaskURL", value:theVarName}	end tellend MakeMaestroVar</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
@@ -1859,24 +1769,16 @@ my MakeMaestroVar(theURL)end tellon MakeMaestroVar(theVarName)	tell applicat
 				<string>2F8DF604-5D0D-4568-BFB5-88AED84609A7</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
-		<string>OnceWithPalette</string>
-		<key>AddToMacroPalette</key>
-		<false/>
-		<key>AddToStatusMenu</key>
-		<false/>
+		<string>Normal</string>
 		<key>IsActive</key>
 		<true/>
-		<key>KeyCode</key>
-		<integer>32767</integer>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -1904,7 +1806,7 @@ my MakeMaestroVar(theURL)end tellon MakeMaestroVar(theVarName)	tell applicat
 						<key>MacroActionType</key>
 						<string>ExecuteMacro</string>
 						<key>MacroUID</key>
-						<string>1785E32B-2A0D-44AA-AC5F-61C1E2FC527B</string>
+						<string>6A02B777-85E2-40BA-B4D8-22DE50260660</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
@@ -1943,7 +1845,7 @@ print theURL
 						<key>UseText</key>
 						<true/>
 						<key>Variable</key>
-						<string>OFTaskNoteUrl</string>
+						<string>OFTaskNoteURL</string>
 					</dict>
 					<dict>
 						<key>Conditions</key>
@@ -1975,7 +1877,7 @@ print theURL
 								<string>Growl</string>
 								<key>Text</key>
 								<string>The URL(s) from the task note:
-%Variable%OFTaskNoteUrl%</string>
+%Variable%OFTaskNoteURL%</string>
 								<key>Title</key>
 								<string>Keyboard Maestro Macro: Get URLs from OmniFocus Note</string>
 							</dict>
@@ -2027,10 +1929,8 @@ print theURL
 				<string>2B407EB0-8F33-4D20-84AB-E40B54C20830</string>
 			</dict>
 		</array>
-		<key>Modifiers</key>
-		<integer>0</integer>
 		<key>Name</key>
-		<string>OmniFocus Maco Functions</string>
+		<string>OmniFocus Macro Functions</string>
 		<key>UID</key>
 		<string>CB77BDFA-AAFF-4F68-88E4-0DD37C4A05A2</string>
 	</dict>
