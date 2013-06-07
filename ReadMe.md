@@ -6,6 +6,7 @@ As of 2013-06-07, the Keyboard Maestro macros have been removed from this repo. 
 
 If you are interested in maintaining the Keyboard Maestro macros for future use, feel free to contact me.
 
+----
 
 Useful for exporting an OmniFocus tasks to another bucket (nvALT, MindMap) in a format that works best for you.
 
