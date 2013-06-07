@@ -1,6 +1,15 @@
 # OmniFocus Keyboard Maestro Macro Functions
 
+## Update ##
+
+As of 2013-06-07, the Keyboard Maestro macros have been removed from this repo. I am no longer a OmniFocus user. It would be irresponsible and careless of me to provide macros that I have no intention to support.
+
+If you are interested in maintaining the Keyboard Maestro macros for future use, feel free to contact me.
+
+
 Useful for exporting an OmniFocus tasks to another bucket (nvALT, MindMap) in a format that works best for you.
+
+
 
 ##  Retrieve Information From a Selected OmniFocus Task
 
@@ -23,8 +32,8 @@ Useful for exporting an OmniFocus tasks to another bucket (nvALT, MindMap) in a 
 
 ## Usage ##
 
-Use Keyboard Maestro action: "Execute A Macro".  
-  
+Use Keyboard Maestro action: "Execute A Macro".
+
 Each function stores the returned value in a Keyboard Maestro variable.
 
 - OFTaskName - Name of the selected task
